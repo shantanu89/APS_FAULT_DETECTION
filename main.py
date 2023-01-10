@@ -1,19 +1,12 @@
 from sensor.logger import logging
 from sensor.exception import SensorException
 import sys,os
+from sensor.utils import get_collection_as_dataframe
 
-def test_logger_and_exception():
-     try:
-          logging.info("Starting logger function")
-          result=3/0
-          print(result)
-     except Exception as e:
-          logging.debug("Stoppint the test logger function")
-          raise SensorException(e,sys)
 
 if __name__=="__main__":
      try:
-          test_logger_and_exception()
+          get_collection_as_dataframe(databasename="aps_data", collectionname="sensor")
      except Exception as e:
           raise e
           

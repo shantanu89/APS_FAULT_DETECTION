@@ -9,10 +9,11 @@ def get_collection_as_dataframe(databasename:str,collectionname:str())->pd.DataF
     try:
         logging.info("Reading data from database:{databasename} and {collectionname}")
         df=pd.DataFrame(list(mongo_client[databasename][collectionname].find()))
-        logging.info(f"found columns:"{df.columns})
+        logging.info(f"found columns:{df.columns}")
 
         if "_id" in df.columns:
             df=df.drop("_id",axis=1)
-            
+        logging.info(f"Rows and  columns of database:{df.shape}")
+        return df   
     except Exception as e:
         raise SensorException(e,sys)
