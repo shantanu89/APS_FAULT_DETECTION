@@ -7,5 +7,5 @@ from dataclasses import dataclass
 class EnvironmentVariable:
     mongodb_url:str=os.getenv("MONGO_DB_URK")
 
-
-client=pymongo.MongoClient("mongodb://localhost:27017")
+env_var=EnvironmentVariable()
+mongo_client=pymongo.MongoClient(env_var.mongodb_url)
