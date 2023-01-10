@@ -6,6 +6,15 @@ import os,sys
 
 #loading data from mongodb database
 def get_collection_as_dataframe(databasename:str,collectionname:str())->pd.DataFrame:
+    """
+    Description: This function return collection as dataframe
+    =========================================================
+    Params:
+    database_name: database name
+    collection_name: collection name
+    =========================================================
+    return Pandas dataframe of a collection
+    """
     try:
         logging.info("Reading data from database:{databasename} and {collectionname}")
         df=pd.DataFrame(list(mongo_client[databasename][collectionname].find()))
