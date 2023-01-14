@@ -5,7 +5,7 @@ from sensor.config import mongo_client
 import os,sys
 
 #loading data from mongodb database
-def get_collection_as_dataframe(databasename:str,collectionname:str())->pd.DataFrame:
+def get_collection_as_dataframe(databasename:str,collectionname:str)->pd.DataFrame:
     """
     Description: This function return collection as dataframe
     =========================================================
