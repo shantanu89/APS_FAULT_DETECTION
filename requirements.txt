@@ -20,5 +20,5 @@ scikit-learn
 apache-airflow
 -e .
 
-#if we want to trigger our code as libary of we want to trigger setup.py file so in that case we need to mention 
+#if we want to trigger our code as libary or we want to trigger setup.py file so in that case we need to mention 
 #-e. in requirement.txt file
