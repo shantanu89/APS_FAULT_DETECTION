@@ -13,12 +13,4 @@ watchfiles==0.17.0
 websockets==10.3
 wincertstore==0.2
 xgboost==1.6.2
-pandas
-PyYAML
-numpy
-scikit-learn
-apache-airflow
 -e .
-
-#if we want to trigger our code as libary or we want to trigger setup.py file so in that case we need to mention 
-#-e. in requirement.txt file

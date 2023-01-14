@@ -2,11 +2,9 @@ import os,sys
 from sensor.exception import SensorException
 from sensor.logger import logging
 from datetime import datetime
-
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
-
 
 class TrainingPipelineConfig:
 
@@ -35,10 +33,10 @@ class DataIngestionConfig:
         try:
             return self.__dict__
         except Exception  as e:
-            raise SensorException(e,sys)
-      
+            raise SensorException(e,sys)     
+
 class DataValidationConfig:...
-class DataTranformationConfig:...
+class DataTransformationConfig:...
 class ModelTrainerConfig:...
 class ModelEvaluationConfig:...
 class ModelPusherConfig:...

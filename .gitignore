@@ -5,8 +5,6 @@ __pycache__/
 artifact
 # C extensions
 *.so
-prediction
-saved_models
 demotest.py
 logs
 artifacts

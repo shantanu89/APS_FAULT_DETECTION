@@ -1,3 +1,4 @@
+
 from sensor import utils
 from sensor.entity import config_entity
 from sensor.entity import artifact_entity
@@ -12,7 +13,6 @@ class DataIngestion:
     
     def __init__(self,data_ingestion_config:config_entity.DataIngestionConfig ):
         try:
-            logging.info(f"{'>>'*20} Data Ingestion {'<<'*20}")
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
             raise SensorException(e, sys)
@@ -22,8 +22,8 @@ class DataIngestion:
             logging.info(f"Exporting collection data as pandas dataframe")
             #Exporting collection data as pandas dataframe
             df:pd.DataFrame  = utils.get_collection_as_dataframe(
-                databasename=self.data_ingestion_config.database_name, 
-                collectionname=self.data_ingestion_config.collection_name)
+                database_name=self.data_ingestion_config.database_name, 
+                collection_name=self.data_ingestion_config.collection_name)
 
             logging.info("Save data in feature store")
 
@@ -42,7 +42,7 @@ class DataIngestion:
 
             logging.info("split dataset into train and test set")
             #split dataset into train and test set
-            train_df,test_df = train_test_split(df,test_size=self.data_ingestion_config.test_size,random_state=42)
+            train_df,test_df = train_test_split(df,test_size=self.data_ingestion_config.test_size)
             
             logging.info("create dataset directory folder if not available")
             #create dataset directory folder if not available
@@ -66,3 +66,7 @@ class DataIngestion:
 
         except Exception as e:
             raise SensorException(error_message=e, error_detail=sys)
+
+
+
+        
