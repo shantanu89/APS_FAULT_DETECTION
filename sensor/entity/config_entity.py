@@ -17,7 +17,7 @@ class TrainingPipelineConfig:
         except Exception  as e:
             raise SensorException(e,sys) 
 
-class DataInjectionConfig:
+class DataIngestionConfig:
 
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
         try:

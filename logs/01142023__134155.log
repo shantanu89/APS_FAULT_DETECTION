@@ -1,0 +1,8 @@
+[ 2023-01-14 13:41:57,001 ] 19 root - INFO - Reading data from database:{databasename} and {collectionname}
+[ 2023-01-14 13:42:00,482 ] 21 root - INFO - found columns:Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[ 2023-01-14 13:42:00,721 ] 25 root - INFO - Rows and  columns of database:(36188, 171)

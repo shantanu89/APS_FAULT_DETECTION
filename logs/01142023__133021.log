@@ -1,0 +1,10 @@
+[ 2023-01-14 13:30:21,879 ] 19 root - INFO - Reading data from database:{databasename} and {collectionname}
+[ 2023-01-14 13:30:25,185 ] 21 root - INFO - found columns:Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[ 2023-01-14 13:30:25,826 ] 25 root - INFO - Rows and  columns of database:(36188, 171)
+[ 2023-01-14 13:30:26,269 ] 12 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-01-14 13:30:26,270 ] 19 root - INFO - Exporting collection data as pandas dataframe
